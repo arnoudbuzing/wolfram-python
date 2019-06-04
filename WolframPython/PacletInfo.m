@@ -8,6 +8,8 @@ Paclet[
   Loading -> Automatic,
   Extensions -> {
    { "Documentation", Language -> "English"},
-   { "Kernel", Symbols -> {}, Context -> {"WolframPython`"} }
+   { "Kernel", Symbols -> {
+     "WolframPython`SyntaxHighlight"
+     }, Context -> {"WolframPython`"} }
   }
 ]

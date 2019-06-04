@@ -1,10 +1,10 @@
 BeginPackage["WolframPython`"]
 
-PacletTemplate::usage = "PacletTemplate[] is a sample function"
+SyntaxHighlight::usage = "SyntaxHighlight[language,code] highlights 'code' string for 'language' using 'pygments'"
 
 Begin["`Private`"]
 
-PacletTemplate[] := "Sample function"
+Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", "Pygments.wl"}] ];
 
 End[]
 
