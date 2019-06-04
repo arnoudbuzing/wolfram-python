@@ -9,7 +9,10 @@ Paclet[
   Extensions -> {
    { "Documentation", Language -> "English"},
    { "Kernel", Symbols -> {
-     "WolframPython`SyntaxHighlight"
+     "WolframPython`SyntaxHighlight",
+     "WolframPython`PythonObject",
+     "WolframPython`PythonObjectEvaluate",
+     "WolframPython`Fernet"
      }, Context -> {"WolframPython`"} }
   }
 ]
