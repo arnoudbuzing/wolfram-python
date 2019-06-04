@@ -2,8 +2,8 @@ SyntaxHighlight[lang_String, code_String] :=
  Module[{language, template, ba, tokens},
   language = lang /. "WolframLanguage" -> "Mathematica";
   If[
-   Head[Python`PygmentSession] =!= ExternalSessionObject,
-   Python`PygmentSession = StartExternalSession["Python"]
+   Head[WolframPython`Sessions`Pygments] =!= ExternalSessionObject,
+   WolframPython`Sessions`Pygments = StartExternalSession["Python"]
    ];
   template = StringTemplate["from pygments import highlight
 from pygments.lexers import `language`Lexer

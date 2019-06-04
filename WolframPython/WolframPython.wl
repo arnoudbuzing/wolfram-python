@@ -4,7 +4,12 @@ SyntaxHighlight::usage = "SyntaxHighlight[language,code] highlights 'code' strin
 
 Begin["`Private`"]
 
-Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", "Pygments.wl"}] ];
+files = {"Pygments.wl", "Cryptography.wl"};
+
+Map[
+ Get[ FileNameJoin[{DirectoryName[$InputFileName], "Source", #}] ]&,
+ files
+]
 
 End[]
 
