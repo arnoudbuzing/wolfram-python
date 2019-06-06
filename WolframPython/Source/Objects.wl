@@ -8,12 +8,11 @@ PythonObject[session_ExternalSessionObject, name_String] := Module[{},
 ]
 
 PythonObjectEvaluate[session_, object_Association, code_String] := Module[{},
-  Once[ExternalEvaluate[session,"import ctypes"]];
   ExternalEvaluate[
     session,
     TemplateApply[
-      StringTemplate["ctypes.cast(`id`,ctypes.py_object).value.`code`"],
-      <|"id" -> object["id"], "code" -> code|>
+      StringTemplate["`name``.`code`"],
+      <|"name" -> object["name"], "code" -> code|>
     ]
   ]
 ]
